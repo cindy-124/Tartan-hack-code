@@ -82,16 +82,20 @@ def servo_Angle(angle):
 
 def run_that_gearrrrrr():
     print("Turn left ...")
-    for i in range(0,180,10):
+    for i in range(start,180,10):
         servo_Angle(i)
         utime.sleep(0.05)
     print("Turn right ...")
-    for i in range(180,0,-10):
+    for i in range(180,start,-10):
         servo_Angle(i)
         utime.sleep(0.05)
+
+start = 150
 turn = 0
 if __name__ == '__main__':
     while True:
         if turn == 0:
-            run_that_gearrrrrr()
-            turn += 1
+            # run_that_gearrrrrr()
+            # turn += 1
+            servo_Angle(180)
+            
